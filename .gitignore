@@ -1,18 +1,17 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+1. `/node_modules`: Thư mục chứa các module được cài đặt thông qua npm. Thường không cần thiết để theo dõi trong quản lý phiên bản vì chúng có thể được tái tạo từ tệp package.json hoặc package-lock.json.
 
-# Other files and folders
-.settings/
+2. `/public/hot`: Thư mục có thể chứa các tệp liên quan đến tính năng hot reloading của ứng dụng web. Thường không cần thiết để theo dõi trong lịch sử phiên bản.
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+3. `/public/storage`: Thư mục dành cho lưu trữ tài nguyên tĩnh của ứng dụng web, như hình ảnh, video, v.v. Thường không cần thiết để theo dõi trong lịch sử phiên bản.
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+4. `/storage/*.key`: Mọi tệp có phần mở rộng .key trong thư mục storage sẽ bị bỏ qua. Điều này có thể ám chỉ đến các tệp khóa hoặc tệp nhạy cảm khác.
+
+5. `/vendor`: Thư mục chứa các thư viện và phụ thuộc của Composer. Thường không cần thiết để theo dõi trong lịch sử phiên bản.
+
+6. `.env` và `.env.backup`: Các tệp cấu hình môi trường, thường chứa thông tin nhạy cảm như cấu hình cơ sở dữ liệu. Việc bỏ qua chúng trong lịch sử phiên bản là quan trọng để không tiết lộ thông tin nhạy cảm.
+
+7. `.phpunit.result.cache`: Tệp cache kết quả của PHPUnit, không cần thiết để theo dõi trong lịch sử phiên bản.
+
+8. `Homestead.json` và `Homestead.yaml`: Các tệp cấu hình cho Homestead, một môi trường phát triển Laravel. Thường không cần thiết để theo dõi trong lịch sử phiên bản.
+
+9. `npm-debug.log` và `yarn-error.log`: Các tệp log của npm và Yarn, thường không cần thiết để theo dõi trong lịch sử phiên bản.
